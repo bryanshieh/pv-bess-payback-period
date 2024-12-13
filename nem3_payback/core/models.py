@@ -23,7 +23,7 @@ class Results(models.Model):
 
 class HourlyReading(models.Model):
     type = models.CharField(max_length=10)# Generation
-    timestamp = models.DateTimeField(auto_now_add=True)
-    start_interval = models.DateTimeField(auto_now_add=True)
-    end_interval = models.DateTimeField(auto_now_add=True)
+    timestamp = models.DateTimeField(null = True)
+    start_interval = models.DateTimeField(null = True)
+    end_interval = models.DateTimeField(null = True)
     reading_kwh = models.DecimalField(max_digits=6, decimal_places = 4)
